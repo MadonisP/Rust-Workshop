@@ -3,14 +3,65 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>IC Hello Starter</title>
+  <meta name="viewport" content="width=device-width" />
+  <title>QR code generator</title>
+  <base href="/" />
+  <link rel="icon" href="favicon.ico" />
+  <link type="text/css" rel="stylesheet" href="main.css" />
 </head>
 
 <body>
-  <div id="root"></div>
+  <form>
+    <div>
+      <h1>Qr kod oluşturucu</h1>
+      <textarea id="text" cols=60 rows=4 placeholder="Enter text"></textarea>
+      <div class="option">
+        <label>
+          <div class="toggle-switch">
+            <input type="checkbox" id="logo" checked>
+            <span class="slider"></span>
+          </div>
+          &nbsp; logo ekle
+        </label>
+      </div>
+      <div class="option">
+        <label>
+          <div class="toggle-switch">
+            <input type="checkbox" id="gradient" checked>
+            <span class="slider"></span>
+          </div>
+          &nbsp; gradient ekle
+        </label>
+      </div>
+      <div class="option">
+        <label>
+          <div class="toggle-switch">
+            <input type="checkbox" id="transparent">
+            <span class="slider"></span>
+          </div>
+          &nbsp; transparant yap
+        </label>
+      </div>
+      <div class="option">
+        <label>
+          <div class="toggle-switch">
+            <input type="checkbox" id="consensus">
+            <span class="slider"></span>
+          </div>
+          &nbsp; blockchain bekle
+        </label>
+      </div>
+      <button class="clean-button" id="generate">Generate!</button>
+      <div>
+        <div id="message"></div>
+        <a id="download" download="qrcode.png">
+          <img id="qrcode" class="qrcode"></img>
+        </a>
+      </div>
+    </div>
+  </form>
   <script type="module" src="/src/main.js"></script>
+
 </body>
 
 </html>
