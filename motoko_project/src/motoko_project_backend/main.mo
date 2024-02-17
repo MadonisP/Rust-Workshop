@@ -25,8 +25,6 @@ actor Assistant {
   var todos = Map.HashMap<Nat, Todo>(0, Nat.equal, natHash);
   var nextId : Nat = 0;
 
-  //ID Todo atmaası
-
   public query func addTodo(description : Text, title : Text) : async Nat {
     let id = nextId;
     todos.put(id, { description = description; completed = false; title = title });
